@@ -26,16 +26,27 @@
       </div>
     </section>
 
-    <!-- Sección Beige: Dos cuadros con imágenes e info overlay -->
-    <section class="beige-section">
-      <div class="image-card" v-for="(card, index) in cards" :key="index">
-        <img :src="card.img" :alt="card.title" class="card-image" />
-        <div class="overlay">
-          <div class="overlay-text">
-            <h3>{{ card.title }}</h3>
-            <p>{{ card.description }}</p>
+    <!-- Sección Beige: Nuestras Clases -->
+    <section class="clases-section">
+      <!-- Título arriba de las tarjetas -->
+      <h2 class="clases-title">Nuestras Clases</h2>
+
+      <!-- Contenedor de tarjetas -->
+      <section class="beige-section">
+        <div class="image-card" v-for="(card, index) in cards" :key="index">
+          <img :src="card.img" :alt="card.title" class="card-image" />
+          <div class="overlay">
+            <div class="overlay-text">
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.description }}</p>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- Botón debajo de las tarjetas -->
+      <div class="boton-reservar-container">
+        <button class="boton-reservar">Reservar</button>
       </div>
     </section>
   </div>
@@ -83,7 +94,7 @@ const cards = [
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #F2F3ED;
   height: 700px;
   padding-left: 9rem;
   padding-right: 9rem;
@@ -98,12 +109,10 @@ const cards = [
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #778E69;
-  padding: 0;
+  color: #15153;
   margin-left: 4rem;
-  margin-right: 0;
-  margin-top: 200px;
   text-align: center;
+  margin-top: 200px;
 }
 
 .about-text h2 {
@@ -132,7 +141,7 @@ const cards = [
   font-size: 0.9rem;
   border-radius: 6px;
   font-weight: 600;
-  background-color: #E0D4BE;
+  background-color: #BCC399;
   color: #778E69;
   border: none;
   cursor: pointer;
@@ -140,16 +149,15 @@ const cards = [
 }
 
 .conocenos-button:hover {
-  background-color: #E0D4BE;
+  background-color: #aeb686;
 }
 
+/* Carrusel */
 .about-carousel {
   flex: 0 0 370px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0;
-  margin: 0;
 }
 
 .circle {
@@ -181,13 +189,24 @@ const cards = [
 }
 
 /* ==== Sección Beige ==== */
+.clases-section {
+  background-color: #BCC399;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.clases-title {
+  color: #E0D4BE;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 .beige-section {
   display: flex;
-  justify-content: space-between;
-  background-color: #E0D4BE;
-  padding: 2rem 12rem;
+  justify-content: center;
   gap: 2rem;
-  margin-top: 40px;
+  padding: 0 12rem;
+  flex-wrap: wrap;
 }
 
 .image-card {
@@ -209,7 +228,6 @@ const cards = [
   object-fit: cover;
   filter: brightness(0.8) drop-shadow(0 0 8px #a9b57a);
   transition: filter 0.3s ease;
-  border-radius: 0;
   z-index: 1;
 }
 
@@ -254,5 +272,28 @@ const cards = [
   margin: 0;
   font-size: 0.9rem;
   text-align: center;
+}
+
+/* Botón Reservar */
+.boton-reservar-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.boton-reservar {
+  background-color: #778E69;
+  color: #F2F3ED;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-reservar:hover {
+  background-color: #aeb686;
 }
 </style>

@@ -55,7 +55,7 @@ function toggleLogin() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E0D4BE;
+  background-color: #F2F3ED;
   padding: 0 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -82,7 +82,7 @@ function toggleLogin() {
 }
 
 .nav-link {
-  color: #BCC399;
+  color: #151513;
   font-weight: 600;
   text-decoration: none;
   font-size: 1rem;
@@ -98,7 +98,7 @@ function toggleLogin() {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  color: #BCC399;
+  color: #151513;
   font-weight: 600;
 }
 
