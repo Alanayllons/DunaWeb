@@ -2,14 +2,13 @@
   <div id="app" class="app-container">
     <NavBar />
     <main class="main-content">
-      <AboutSection />
+      <router-view /> <!-- Aquí se renderiza la vista actual -->
     </main>
   </div>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue'
-import AboutSection from './components/AboutSection.vue'
 </script>
 
 <style>
@@ -22,15 +21,16 @@ html, body, #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #F2F3ED; /* color secundario para fondo */
-  color: #151513; /* color negro para texto principal */
+  background-color: #F2F3ED;
+  color: #151513;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main.main-content {
-  flex: 1; /* Ocupa todo el espacio restante */
+  flex: 1;
   padding: 2rem;
   text-align: center;
-  margin-top: 80px; /* para dejar espacio debajo del navbar fijo */
+  margin-top: 80px;
 }
 </style>
+
